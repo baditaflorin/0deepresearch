@@ -1,0 +1,22 @@
+{{ define "content" }}
+    <section class="profile-list">
+        <h2>{{ .PageTitle }}</h2>
+
+        {{/* Check if there are any profiles to display */}}
+        {{ if .Profiles }}
+            <ul>
+                {{/* Loop through the Profiles slice passed in the data */}}
+                {{ range .Profiles }}
+                    <li>
+                        {{/* Link to the individual profile page using its Slug */}}
+                        <a href="/profile/{{ .Slug }}">{{ .Title }}</a>
+                        {{/* Optionally display the slug for clarity: ({{ .Slug }}.md) */}}
+                    </li>
+                {{ end }}
+            </ul>
+        {{ else }}
+            {{/* Message displayed if no profiles are found */}}
+            <p>No research profiles have been added yet. Visit the <a href="/admin">Admin</a> page to upload one.</p>
+        {{ end }}
+    </section>
+{{ end }}

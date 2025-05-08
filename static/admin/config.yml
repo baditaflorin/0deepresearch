@@ -3,7 +3,7 @@ backend:
   name: github # Use 'gitlab' or 'bitbucket' for other providers
   repo: baditaflorin/0deepresearch # Confirmed correct
   branch: main # Or your default branch, e.g., master
-  # site_domain: 0deepresearch.com # Commented out for troubleshooting - often not needed for same-domain admin
+  site_domain: https://0deepresearch.com # Commented out for troubleshooting - often not needed for same-domain admin
 
 # Enable editorial workflow. This creates pull requests for new content.
 #publish_mode: editorial_workflow

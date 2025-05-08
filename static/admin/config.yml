@@ -6,34 +6,17 @@ backend:
   branch: main # Your default branch (e.g., main or master)
 
   # --- Sveltia Authenticator Configuration ---
-  # This tells Sveltia CMS to use your Cloudflare Worker for authentication.
-  # Replace <YOUR_WORKER_URL> with the actual URL of your deployed Cloudflare Worker.
-  # Your Worker URL is: https://sveltia-cms-auth.baditaflorin.workers.dev
   base_url: https://sveltia-cms-auth.baditaflorin.workers.dev
 
-  # The 'auth_endpoint' is typically not needed if 'base_url' is set for Sveltia's own authenticator,
-  # as the authenticator itself knows its paths (like /auth and /callback).
-  # However, if Sveltia's documentation for the authenticator specifically mentions an auth_endpoint, add it.
-  # Example (if needed, but usually not for Sveltia's own authenticator):
-  # auth_endpoint: auth
-
-  # 'app_id' (GitHub Client ID) is also usually not needed here if the Worker
-  # is configured with GITHUB_CLIENT_ID as an environment variable.
-  # The Worker handles the interaction with GitHub using its configured credentials.
-  # Example (if needed, but likely not):
-  # app_id: Ov23liiGLekbfONNHTuf # Your GitHub OAuth App Client ID
-
 # Enable editorial workflow (optional, but common for a review process)
-# This creates pull requests for new content.
 publish_mode: editorial_workflow
 
 # Media files will be stored in the 'static/uploads' directory of your repo.
-# Make sure this path is accessible by your Hugo site.
 media_folder: "static/uploads"
 # The public path for media files (relative to your site's root).
 public_folder: "/uploads"
 
-# Define the content collections (your existing collections should remain here)
+# Define the content collections
 # Ensure this section is identical to your previous working config,
 # unless Sveltia CMS documentation suggests specific changes for your content types.
 collections:
@@ -42,37 +25,48 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
+    format: toml # <--- ADD THIS LINE TO OUTPUT TOML
+    # For date formatting to match 'YYYY-MM-DDTHH:mm:ssZ' (ISO 8601 with timezone)
+    # you might need to configure the datetime widget.
+    # Sveltia CMS aims for TOML native dates, but Hugo's TOML parser might prefer quoted strings.
+    # Default date widget output for TOML should be `date = YYYY-MM-DDTHH:mm:ssZ`
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false} # Adjusted for TOML and timezone
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"} # Use 'text' for multi-line
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "posts"
     label: "Posts"
-    folder: "content/posts"
+    folder: "content/posts" # Assuming you have or will have a posts folder
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: toml # <--- ADD THIS LINE TO OUTPUT TOML
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false} # Adjusted for TOML and timezone
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text"} # Use 'text' for multi-line
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "utility_pages"
+  - name: "utility_pages" # For specific files like _index.md
     label: "Utility Pages"
     files:
       - name: "about_content"
         label: "About Us Page Content"
         file: "content/about/_index.md"
+        format: toml # <--- ADD THIS LINE TO OUTPUT TOML
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false} # Adjusted for TOML and timezone
           - {label: "Draft", name: "draft", widget: "boolean", default: false}
-          - {label: "Description", name: "description", widget: "string", required: false}
+          - {label: "Description", name: "description", widget: "text"} # Use 'text' for multi-line
           - {label: "Body", name: "body", widget: "markdown"}
 
 # Add any other global configurations for Sveltia CMS if needed,
 # referring to their documentation.
+# For example, to influence global data output for TOML (though 'format: toml' per collection is more direct):
+# output:
+#   toml:
+#     # Sveltia specific TOML output options if available

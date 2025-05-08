@@ -1,72 +1,78 @@
 # Backend configuration: Connects to your GitHub repository
 # and uses your Cloudflare Worker for authentication.
-backend:
-  name: github # Specifies the Git provider
-  repo: baditaflorin/0deepresearch # Your GitHub repository path (username/repo_name)
-  branch: main # Your default branch (e.g., main or master)
+    backend:
+      name: github # Specifies the Git provider
+      repo: baditaflorin/0deepresearch # Your GitHub repository path (username/repo_name)
+      branch: main # Your default branch (e.g., main or master)
 
-  # --- Sveltia Authenticator Configuration ---
-  base_url: https://sveltia-cms-auth.baditaflorin.workers.dev
+      # --- Sveltia Authenticator Configuration ---
+      base_url: https://sveltia-cms-auth.baditaflorin.workers.dev
 
 # Enable editorial workflow (optional, but common for a review process)
-publish_mode: editorial_workflow
+    publish_mode: editorial_workflow
 
 # Media files will be stored in the 'static/uploads' directory of your repo.
-media_folder: "static/uploads"
+    media_folder: "static/uploads"
 # The public path for media files (relative to your site's root).
-public_folder: "/uploads"
+    public_folder: "/uploads"
 
 # Define the content collections
-# Ensure this section is identical to your previous working config,
-# unless Sveltia CMS documentation suggests specific changes for your content types.
-collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content"
-    create: true
-    slug: "{{slug}}"
-    format: toml # <--- ADD THIS LINE TO OUTPUT TOML
-    # For date formatting to match 'YYYY-MM-DDTHH:mm:ssZ' (ISO 8601 with timezone)
-    # you might need to configure the datetime widget.
-    # Sveltia CMS aims for TOML native dates, but Hugo's TOML parser might prefer quoted strings.
-    # Default date widget output for TOML should be `date = YYYY-MM-DDTHH:mm:ssZ`
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false} # Adjusted for TOML and timezone
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Description", name: "description", widget: "text"} # Use 'text' for multi-line
-      - {label: "Body", name: "body", widget: "markdown"}
-
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts" # Assuming you have or will have a posts folder
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    format: toml # <--- ADD THIS LINE TO OUTPUT TOML
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false} # Adjusted for TOML and timezone
-      - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Description", name: "description", widget: "text"} # Use 'text' for multi-line
-      - {label: "Body", name: "body", widget: "markdown"}
-
-  - name: "utility_pages" # For specific files like _index.md
-    label: "Utility Pages"
-    files:
-      - name: "about_content"
-        label: "About Us Page Content"
-        file: "content/about/_index.md"
-        format: toml # <--- ADD THIS LINE TO OUTPUT TOML
+    collections:
+      - name: "pages"
+        label: "Pages"
+        folder: "content"
+        create: true
+        slug: "{{slug}}"
+        format: toml # Front matter format
+        extension: "md" # <--- ADD THIS LINE for file extension
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false} # Adjusted for TOML and timezone
-          - {label: "Draft", name: "draft", widget: "boolean", default: false}
-          - {label: "Description", name: "description", widget: "text"} # Use 'text' for multi-line
+          - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true}
+          - {label: "Description", name: "description", widget: "text"}
           - {label: "Body", name: "body", widget: "markdown"}
 
-# Add any other global configurations for Sveltia CMS if needed,
-# referring to their documentation.
-# For example, to influence global data output for TOML (though 'format: toml' per collection is more direct):
+      - name: "posts"
+        label: "Posts"
+        folder: "content/posts"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # This generates the filename stem
+        format: toml # Front matter format
+        extension: "md" # <--- ADD THIS LINE for file extension
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - name: "utility_pages" # For specific files like _index.md
+        label: "Utility Pages"
+        files:
+          - name: "about_content"
+            label: "About Us Page Content"
+            file: "content/about/_index.md" # This specifies the full filename, so extension field isn't usually needed here
+            format: toml # Front matter format
+            # extension: "md" # Typically not needed when 'file' path is absolute
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "YYYY-MM-DD", time_format: "HH:mm:ss", picker_utc: false}
+              - {label: "Draft", name: "draft", widget: "boolean", default: false}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Body", name: "body", widget: "markdown"}
+          # If you add content/posts/_index.md here, it would look similar:
+          # - name: "posts_index_content"
+          #   label: "Posts List Page Content"
+          #   file: "content/posts/_index.md"
+          #   format: toml
+          #   fields:
+          #     - {label: "Title", name: "title", widget: "string"}
+          #     - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ"}
+          #     - {label: "Description", name: "description", widget: "text"}
+          #     - {label: "Body", name: "body", widget: "markdown"}
+
+# Global output settings (less common to need if format is per collection)
 # output:
 #   toml:
 #     # Sveltia specific TOML output options if available
+  ```

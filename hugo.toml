@@ -1,0 +1,22 @@
+# Base URL for your site (important for deployment)
+baseURL = "https://0deepresearch.com/"
+
+# Language code
+languageCode = "en-us"
+
+# Site title (you should customize this)
+title = "0DeepResearch Insights"
+
+# Theme configuration
+theme = "ananke"
+
+[params]
+  text_color = ""
+  author = "0DeepResearch Team at Scrape the World"
+  favicon = "" # TODO: Add path to your favicon
+  site_logo = "" # TODO: Add path to your site logo
+  description = "Exploring the depths of research and innovation."
+  # choose a background color from predefined colors in CSS for Ananke theme
+  background_color_class = "bg-black"
+  recent_posts_number = 3
+

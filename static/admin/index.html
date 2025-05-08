@@ -4,98 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <link rel="cms-config-url" href="/admin/config.yml">
+
 </head>
 <body>
-<script>
-    // Manually fetch the config.yml and initialize Decap CMS
-    // This ensures the CMS uses your specific configuration.
-    fetch('/admin/config.yml')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} when fetching config.yml`);
-            }
-            // Assuming config.yml is YAML, Decap CMS can parse it directly
-            // if it's passed as a string.
-            // For more robust YAML parsing in the browser, one might use js-yaml,
-            // but Decap CMS's init should handle a string representation of YAML.
-            return response.text();
-        })
-        .then(configYAML => {
-            // Initialize Decap CMS with the fetched configuration content
-            // The CMS.init() method can take an object, but it can also
-            // often infer from a string if it's correctly formatted YAML.
-            // For safety, we can try to parse it if needed, but let's start simple.
-            // Decap CMS expects the config as an object.
-            // However, the bootstrap process usually handles fetching and parsing
-            // when a config URL is provided.
-            // Let's try passing the path and letting its internal mechanisms work,
-            // but ensure this script runs after the main CMS script.
-
-            // The primary way to ensure config is loaded is via the <link> tag,
-            // which you already have (or had).
-            // If that's not working, and direct init is needed, we'd typically
-            // parse YAML to JS object here.
-            // For now, let's ensure the CMS object is available globally
-            // and then call init. The CMS script itself should handle the config
-            // linked by <link rel="cms-config-url">.
-
-            // The previous version of this file had:
-            // <link rel="cms-config-url" href="/admin/config.yml">
-            // and the script at the end. This is generally the preferred way.
-
-            // If the <link> method is failing, an alternative is to load config and init manually:
-            // This requires a YAML parser or hoping Decap's internal init can handle raw YAML text.
-            // Let's assume js-yaml is not available.
-            // A more robust manual init would look like this if you included a YAML parser:
-            /*
-            const config = jsyaml.load(configYAML); // Requires js-yaml library
-            window.CMS.init({ config });
-            */
-
-            // Given the current setup, the script tag for Decap CMS is already included.
-            // It should automatically look for a <link rel="cms-config-url"> or a global `config` object.
-            // The issue might be more subtle if the redirect happens before this custom script runs
-            // or if the default Decap bootstrap process itself is what leads to Netlify.
-
-            // Forcing the config explicitly:
-            // This assumes Decap CMS makes `CMS` globally available.
-            if (window.CMS) {
-                // Decap CMS's init() can take a `config` object.
-                // We need to provide the *parsed* YAML as a JavaScript object.
-                // Since we don't have a YAML parser here by default,
-                // the best approach is to rely on Decap's internal config loading
-                // mechanism triggered by the <link> tag.
-
-                // Let's re-add the link tag and ensure this script block doesn't interfere
-                // but rather acts as a check.
-
-                // The most reliable method is the <link rel="cms-config-url">.
-                // If that's not working despite being present and the config.yml being accessible,
-                // the problem is deeper.
-
-                // The error "Cannot read properties of null (reading 'appendChild')" was solved by moving script to end.
-                // The Netlify redirect is a separate auth flow issue.
-
-                // Let's simplify and go back to the standard way, ensuring everything is minimal and correct.
-                // The current problem is not the JS failing to run, but the auth redirect.
-                console.log("Decap CMS script loaded. Attempting to use linked config.yml.");
-            } else {
-                console.error("Decap CMS global object (CMS) not found.");
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching or processing config.yml:", error);
-            // Display a message to the user on the page
-            const body = document.querySelector('body');
-            if (body) {
-                const errorDiv = document.createElement('div');
-                errorDiv.textContent = 'Error loading CMS configuration. Please check the console for details. Ensure /admin/config.yml is accessible and correctly formatted.';
-                errorDiv.style.color = 'red';
-                errorDiv.style.padding = '20px';
-                body.insertBefore(errorDiv, body.firstChild);
-            }
-        });
-</script>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>

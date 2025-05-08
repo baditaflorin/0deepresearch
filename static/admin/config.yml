@@ -6,7 +6,7 @@ backend:
   # site_domain: 0deepresearch.com # Commented out for troubleshooting - often not needed for same-domain admin
 
 # Enable editorial workflow. This creates pull requests for new content.
-publish_mode: editorial_workflow
+#publish_mode: editorial_workflow
 
 # Media files will be stored in the 'static/uploads' directory of your repo.
 # Make sure this path is accessible by your Hugo site.

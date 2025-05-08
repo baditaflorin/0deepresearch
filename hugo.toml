@@ -20,3 +20,7 @@ theme = "ananke"
   background_color_class = "bg-black"
   recent_posts_number = 3
 
+
+[params.telemetry]
+projectID = "clnzoxcy10001vy2ohi4obbi0"
+trackerID = "cmafkt515000qgrcbtovh6g10" # This might be a general site/article tracker ID

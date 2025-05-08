@@ -18,7 +18,7 @@ theme = "ananke"
   description = "Exploring the depths of research and innovation."
   # choose a background color from predefined colors in CSS for Ananke theme
   background_color_class = "bg-black"
-  recent_posts_number = 3
+  recent_posts_number = 30
 
 
 [params.telemetry]

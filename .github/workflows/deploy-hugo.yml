@@ -41,7 +41,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2 # Popular Hugo setup action
         with:
           hugo-version: '${{ env.HUGO_VERSION }}'
-          # extended: true # Uncomment if your theme or modules require the Hugo extended version
+          extended: true # Uncomment if your theme or modules require the Hugo extended version
 
       - name: Setup Pages
         id: pages

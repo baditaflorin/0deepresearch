@@ -1,6 +1,6 @@
 ---
 title: 'The Box That Built the Modern World: Containerization, Globalization, and the Transformation of Global Trade'
-date: 2025-05-08T21:02:00
+date: 2025-05-08T20:02:00
 draft: false
 description: 'The Box That Built the Modern World: Containerization, Globalization, and the Transformation of Global Trade I. The Pre-Containerized World: Inefficiency and Peril on the Docks Before the mid-twentieth century, the movement of goods across oceans was governed by the laborious and inefficient system of break-bulk cargo handling. This traditional method, where goods were transported in myriad forms—barrels, sacks, crates, pallets, drums, or simply bundled—required individual loading and unloading onto vessels, a process fraught with high costs, extensive delays, significant risks of damage and theft, and perilous working conditions for those on the docks.1 This era represents a stark contrast to the streamlined logistics of today, highlighting the fundamental constraints that break-bulk shipping imposed on the potential scale and scope of international commerce.'
 ---

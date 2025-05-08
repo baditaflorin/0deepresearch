@@ -1,12 +1,10 @@
 +++
-date = '2025-05-08T19:20:35+03:00'
-draft = true
+date = '2025-05-08T19:19:35+03:00'
+draft = false
 title = 'Architecture Decision Records a Comprehensive Analysis'
 +++
 
 # Architecture Decision Records: A Comprehensive Analysis
-
-# **Architecture Decision Records: A Comprehensive Analysis**
 
 ## **1. The Essence of Architecture Decision Records (ADRs): Defining Purpose and Problems Solved**
 

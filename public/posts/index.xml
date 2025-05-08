@@ -6,8 +6,15 @@
     <description>Recent content in Blog Posts on 0DeepResearch Insights</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 May 2025 15:20:50 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 May 2025 19:20:35 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture Decision Records a Comprehensive Analysis</title>
+      <link>http://localhost:1313/posts/architecture-decision-records-a-comprehensive-analysis/</link>
+      <pubDate>Thu, 08 May 2025 19:20:35 +0300</pubDate>
+      <guid>http://localhost:1313/posts/architecture-decision-records-a-comprehensive-analysis/</guid>
+      <description>&lt;h1 id=&#34;architecture-decision-records-a-comprehensive-analysis&#34;&gt;Architecture Decision Records: A Comprehensive Analysis&lt;/h1&gt;&#xA;&lt;h1 id=&#34;architecture-decision-records-a-comprehensive-analysis-1&#34;&gt;&lt;strong&gt;Architecture Decision Records: A Comprehensive Analysis&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;1-the-essence-of-architecture-decision-records-adrs-defining-purpose-and-problems-solved&#34;&gt;&lt;strong&gt;1. The Essence of Architecture Decision Records (ADRs): Defining Purpose and Problems Solved&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;Architecture Decision Records (ADRs) represent a critical component in the discipline of software architecture, serving as formal documentation for the choices that shape a system&amp;rsquo;s design and evolution. Understanding their definition, purpose, and the specific problems they address is fundamental to leveraging their full potential within software development projects.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>

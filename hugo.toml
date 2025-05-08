@@ -12,7 +12,7 @@ theme = "ananke"
 
 [params]
   text_color = ""
-  author = "0DeepResearch Team at Scrape the World"
+  author = "DeepResearch Team at Scrape the World"
   favicon = "" # TODO: Add path to your favicon
   site_logo = "" # TODO: Add path to your site logo
   description = "Exploring the depths of research and innovation."
@@ -23,4 +23,4 @@ theme = "ananke"
 
 [params.telemetry]
 projectID = "clnzoxcy10001vy2ohi4obbi0"
-trackerID = "cmafkt515000qgrcbtovh6g10" # This might be a general site/article tracker ID
+trackerID = "cmafkt515000qgrcbtovh6g10"

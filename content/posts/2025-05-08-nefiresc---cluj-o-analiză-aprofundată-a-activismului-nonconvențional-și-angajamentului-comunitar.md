@@ -1,6 +1,6 @@
 ---
 title: 'Nefiresc - Cluj: O Analiză Aprofundată a Activismului Nonconvențional și Angajamentului Comunitar'
-date: 2025-05-09T10:05:00
+date: 2025-05-08T00:10:00
 draft: false
 description: Nefiresc - Cluj este identificată ca o organizație non-guvernamentală (ONG) activă, cu sediul în Cluj-Napoca.1 Activitățile sale principale se concentrează pe organizarea de flashmob-uri, happening-uri și o formă distinctă de intervenție socială denumită "artivism".1 Denumirea însăși, "Nefiresc," care se traduce din limba română prin "nenatural," "nonconvențional," sau "neobișnuit," nu este aleatorie. Această nomenclatură reflectă în mod deliberat abordarea sa specifică față de angajamentul comunitar și interacțiunea socială, având ca scop perturbarea rutinelor cotidiene și facilitarea unor experiențe inedite. Stabilirea entității Nefiresc - Cluj sub umbrela unui ONG oferă un cadru inițial pentru înțelegerea structurii și potențialelor sale obiective, situând-o în sectorul societății civile. Alegerea numelui reprezintă un marker cultural semnificativ, semnalând intenția sa distinctă încă de la început.
 ---

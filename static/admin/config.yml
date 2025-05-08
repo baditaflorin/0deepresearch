@@ -1,0 +1,75 @@
+# Backend configuration: Connects to your GitHub repository
+backend:
+  name: github # Use 'gitlab' or 'bitbucket' for other providers
+  repo: baditaflorin/0deepresearch # Replace with your repo path, e.g., 0deepresearch/your-site-repo
+  branch: main # Or your default branch, e.g., master
+  # Optional: If your site is deployed to a subdirectory, uncomment and set this:
+  site_domain: 0deepresearch.com
+
+# Enable editorial workflow. This creates pull requests for new content.
+publish_mode: editorial_workflow
+
+# Media files will be stored in the 'static/uploads' directory of your repo.
+# Make sure this path is accessible by your Hugo site.
+media_folder: "static/uploads"
+# The public path for media files (relative to your site's root).
+public_folder: "/uploads"
+
+# Define the content collections
+collections:
+  - name: "pages" # Used in routes, e.g., /admin/#/collections/pages
+    label: "Pages" # Used in the UI
+    folder: "content" # The path to the folder where page files are stored
+    filter: {field: "layout", value: "single"} # Optional: filter to only show files with layout: single
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., "about-us" will create "content/about-us.md"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      # If you have specific layouts for pages, you might add:
+      # - {label: "Layout", name: "layout", widget: "hidden", default: "single"}
+
+  # Example for a "posts" collection (if you have a blog)
+  # You would typically store posts in a subfolder like 'content/posts'
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts" # Adjust if your posts are in a different directory
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Example: 2025-05-08-my-new-post.md
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      # Add other fields relevant to your posts, like tags, categories, author
+      # - {label: "Author", name: "author", widget: "string", required: false}
+      # - {label: "Tags", name: "tags", widget: "list", required: false}
+      # - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # Configuration for the "About Us" page (content/about/_index.md)
+  # This is an example of managing a specific single page.
+  - name: "about_page"
+    label: "About Page"
+    folder: "content/about" # Path to the folder containing _index.md
+    # This tells Decap CMS to look for files, and we'll target _index.md
+    # For single files, you might need to be more specific or use a different approach
+    # if the default file discovery doesn't pick up _index.md easily.
+    # A common pattern for single files is to use the 'files' collection type.
+    # However, for a section like 'about', it's often an _index.md.
+    # Let's assume 'content/about/_index.md' is the primary content file for the about section.
+    # If you have other files in content/about/ that are not _index.md, you might need to adjust.
+    # For a single _index.md file, a 'file' collection is often better:
+    files:
+      - name: "about_content"
+        label: "About Us Page Content"
+        file: "content/about/_index.md" # Exact path to the file
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - {label: "Description", name: "description", widget: "string", required: false}
+          - {label: "Body", name: "body", widget: "markdown"}

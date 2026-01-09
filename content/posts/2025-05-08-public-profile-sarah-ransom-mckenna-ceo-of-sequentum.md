@@ -14,7 +14,9 @@ Sarah McKenna brings over two decades of experience from New York City's technol
 
 As CEO of Sequentum, McKenna oversees the company's growth in software, data services, and data products.1 Sequentum, backed by WorldQuant Ventures 1, provides enterprise-grade web data extraction solutions, including its Sequentum Enterprise software, managed data services, and the cloud-based SaaS platform, Sequentum Cloud.5 The company targets corporate, financial, and government clients requiring high-quality, reliable, and compliant alternative data for critical decision-making.4 Under McKenna's leadership, Sequentum has emphasized the development and promotion of industry standards for ethical and compliant web data collection, notably through her role as Technical Advisor for the SIIA Financial Information Standards Division (FISD) Alt Data Council's Web Data Collection Considerations.4 Key milestones during her tenure include the launch of Sequentum Cloud and the Sequentum Marketplace for Intelligent Agents 5, achieving SOC-2 accreditation 10, and receiving industry recognition such as the CIOReview 2024 Enterprise Data Delivery Platform of the Year award.10
 
-McKenna's publicly documented network reflects her multifaceted role. It includes close colleagues within Sequentum's leadership team, peers across the data and fintech industries encountered through standards bodies and event participation, and individuals connected through non-professional activities, such as philanthropic support for ANERA 11 and participation in a cultural presentation possibly linked to family ties.12 Overall, Sarah McKenna emerges as a technically grounded leader adept at navigating the complexities of the data technology landscape, driving Sequentum's growth while actively shaping the standards and ethical considerations of the web data extraction industry.
+McKenna's publicly documented network reflects her multifaceted role. It includes close colleagues within Sequentum's leadership team, peers across the data and fintech industries encountered through standards bodies and event participation.
+
+Overall, Sarah McKenna emerges as a technically grounded leader adept at navigating the complexities of the data technology landscape, driving Sequentum's growth while actively shaping the standards and ethical considerations of the web data extraction industry.
 
 ## **II. Biographical Profile: Sarah (Ransom) McKenna**
 
@@ -159,9 +161,7 @@ This category includes individuals and groups McKenna has interacted with throug
 
 These connections fall outside her direct professional role at Sequentum but are documented publicly:
 
-- **Marjorie Ransom:** An author and lecturer specializing in Middle Eastern jewelry and textiles. Sarah Ransom McKenna participated as a live model (wearing traditional Egyptian attire) in a presentation given by Marjorie Ransom at the Textile Museum on July 28, 2003.12 The shared middle name "Ransom" and the context strongly suggest a potential familial relationship, though this is not explicitly stated in the sources.
 - **Fellow Models at Marjorie Ransom Event (2003):** Individuals who participated alongside Sarah Ransom McKenna as models in the 2003 Textile Museum event: Danya Malki, Rima al-Shawkani, Patricia Waller, Lamees al-Shawkani, and Mimi Keghida.12
-- **ANERA (American Near East Refugee Aid):** Sarah Ransom McKenna is listed as a donor (in the $500-$999 contribution range) in ANERA's 2009 Annual Report.11 This documents philanthropic activity and interest in the organization's mission.
 - **Choate Rosemary Hall Students:** McKenna addressed students at this institution, representing an audience interaction rather than a direct collaborative relationship.13
 
 ### **D. Excluded Mentions**
@@ -194,7 +194,7 @@ The following table summarizes the key individuals and groups publicly associate
 | **Other Public Associations** |  |  |
 | Marjorie Ransom | Author/Lecturer; McKenna participated as a model in her 2003 presentation; Potential familial connection suggested by shared middle name "Ransom" | 12 |
 | Danya Malki, et al. | Fellow models at Marjorie Ransom's 2003 event | 12 |
-| ANERA | Philanthropic recipient; McKenna listed as donor ($500-$999) in 2009 report | 11 |
+|  |  |
 | Choate Rosemary Hall Students | Audience addressed by McKenna | 13 |
 
 ## **VI. Concluding Synthesis**
@@ -214,14 +214,14 @@ In conclusion, Sarah McKenna stands out as a significant figure in the enterpris
 3. FISD Webinar: Alternative Data Council – Getting Data to Flow – SIIA, accessed April 29, 2025, [https://fisd.net/speaker/fisd-webinar-alternative-data-council/](https://fisd.net/speaker/fisd-webinar-alternative-data-council/)
 4. Our Leadership - Sequentum, accessed April 29, 2025, [https://www.sequentum.com/about](https://www.sequentum.com/about)
 5. Sarah McKenna — BerylElites, accessed April 29, 2025, [https://berylelites.com/sarah-mckenna](https://berylelites.com/sarah-mckenna)
-6. Sequentum - 2025 Company Profile, Funding & Competitors - Tracxn, accessed April 29, 2025, [https://tracxn.com/d/companies/sequentum/\_\_-yDtu\_2DHndPEAyd6rNnCN9T8op7nIQeURLBHdXJDlk](https://tracxn.com/d/companies/sequentum/__-yDtu_2DHndPEAyd6rNnCN9T8op7nIQeURLBHdXJDlk)
+6. Sequentum - 2025 Company Profile, Funding & Competitors - Tracxn, accessed April 29, 2025, [https://tracxn.com/d/companies/sequentum/__-yDtu_2DHndPEAyd6rNnCN9T8op7nIQeURLBHdXJDlk](https://tracxn.com/d/companies/sequentum/__-yDtu_2DHndPEAyd6rNnCN9T8op7nIQeURLBHdXJDlk)
 7. Sequentum | Low Code Web Data Pipelines at Enterprise Scale, accessed April 29, 2025, [https://www.sequentum.com/](https://www.sequentum.com/)
 8. Enterprise Data Platform - Sequentum, accessed April 29, 2025, [https://www.sequentum.com/products](https://www.sequentum.com/products)
 9. Sequentum, accessed April 29, 2025, [https://www.sequentum.com/news/sequentum-launches-marketplace-a-self-serve-platform-to-access-intelligent-agents](https://www.sequentum.com/news/sequentum-launches-marketplace-a-self-serve-platform-to-access-intelligent-agents)
 10. Resources - Sequentum, accessed April 29, 2025, [https://www.sequentum.com/resources](https://www.sequentum.com/resources)
-11. www.anera.org, accessed April 29, 2025, [http://www.anera.org/wp-content/uploads/2013/03/ANERAAnnualReport2009.pdf](http://www.anera.org/wp-content/uploads/2013/03/ANERAAnnualReport2009.pdf)
+11. Resources - Sequentum, accessed April 29, 2025, [https://www.sequentum.com/resources](https://www.sequentum.com/resources)
 12. Lectures — Marjorie Ransom, accessed April 29, 2025, [https://www.ransomsilverspeaks.com/lectures](https://www.ransomsilverspeaks.com/lectures)
-13. Choate Rosemary Hall Bulletin | Winter '24 - Issuu, accessed April 29, 2025, [https://issuu.com/choaterosemaryhall/docs/crh\_bulletinw25\_230778\_merged\_pgs\_issuu](https://issuu.com/choaterosemaryhall/docs/crh_bulletinw25_230778_merged_pgs_issuu)
+13. Choate Rosemary Hall Bulletin | Winter '24 - Issuu, accessed April 29, 2025, [https://issuu.com/choaterosemaryhall/docs/crh_bulletinw25_230778_merged_pgs_issuu](https://issuu.com/choaterosemaryhall/docs/crh_bulletinw25_230778_merged_pgs_issuu)
 14. Sequentum CEO, Founder, Key Executive Team, Board of Directors, accessed April 29, 2025, [https://www.cbinsights.com/company/sequentum/people](https://www.cbinsights.com/company/sequentum/people)
 15. Sequentum NYC Office: Careers, Perks + Culture, accessed April 29, 2025, [https://www.builtinnyc.com/company/sequentum](https://www.builtinnyc.com/company/sequentum)
 16. Sequentum Enterprise Reviews, Ratings & Features 2025 | Gartner Peer Insights, accessed April 29, 2025, [https://www.gartner.com/reviews/market/data-and-analytics-others/vendor/sequentum/product/sequentum-enterprise](https://www.gartner.com/reviews/market/data-and-analytics-others/vendor/sequentum/product/sequentum-enterprise)
@@ -237,6 +237,6 @@ In conclusion, Sarah McKenna stands out as a significant figure in the enterpris
 26. People – - DivcoWest, accessed April 29, 2025, [https://divcowest.com/people/](https://divcowest.com/people/)
 27. In Performance: Jesse Paris Smith, Rebecca Foon & Nikolai Fraiture respond to 'Catherine Goodman. Silent Music' - Hauser & Wirth, accessed April 29, 2025, [https://www.hauserwirth.com/events/in-performance-jesse-paris-smith-rebecca-foon-and-nikolai-fraiture-respond](https://www.hauserwirth.com/events/in-performance-jesse-paris-smith-rebecca-foon-and-nikolai-fraiture-respond)
 28. Psu.edu - Penn State School of International Affairs, accessed April 29, 2025, [https://www.sia.psu.edu/people/individual/psu.edu](https://www.sia.psu.edu/people/individual/psu.edu)
-29. Kansas Register, accessed April 29, 2025, [https://sos.ks.gov/publications/Register/Volume-40/PDF/Vol\_40\_No\_34\_August\_26\_2021\_July\_2021\_Forfeitures.pdf](https://sos.ks.gov/publications/Register/Volume-40/PDF/Vol_40_No_34_August_26_2021_July_2021_Forfeitures.pdf)
-30. Annual Report - UNC School of Law, accessed April 29, 2025, [https://law.unc.edu/wp-content/uploads/2024/08/v2\_23-24-Pro-Bono-Annual-Report.pdf](https://law.unc.edu/wp-content/uploads/2024/08/v2_23-24-Pro-Bono-Annual-Report.pdf)
+29. Kansas Register, accessed April 29, 2025, [https://sos.ks.gov/publications/Register/Volume-40/PDF/Vol_40_No_34_August_26_2021_July_2021_Forfeitures.pdf](https://sos.ks.gov/publications/Register/Volume-40/PDF/Vol_40_No_34_August_26_2021_July_2021_Forfeitures.pdf)
+30. Annual Report - UNC School of Law, accessed April 29, 2025, [https://law.unc.edu/wp-content/uploads/2024/08/v2_23-24-Pro-Bono-Annual-Report.pdf](https://law.unc.edu/wp-content/uploads/2024/08/v2_23-24-Pro-Bono-Annual-Report.pdf)
 31. DOD Vendors with Contracts over $25,000.00, accessed April 29, 2025, [https://dodsoco.ogc.osd.mil/Portals/102/Documents/Conflicts/2024%2025K%20FY2023.pdf](https://dodsoco.ogc.osd.mil/Portals/102/Documents/Conflicts/2024%2025K%20FY2023.pdf)

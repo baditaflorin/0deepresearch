@@ -194,7 +194,7 @@ The following table summarizes the key individuals and groups publicly associate
 | **Other Public Associations** |  |  |
 | Marjorie Ransom | Author/Lecturer; McKenna participated as a model in her 2003 presentation; Potential familial connection suggested by shared middle name "Ransom" | 12 |
 | Danya Malki, et al. | Fellow models at Marjorie Ransom's 2003 event | 12 |
-|  |  |
+| --- | --- | --- |
 | Choate Rosemary Hall Students | Audience addressed by McKenna | 13 |
 
 ## **VI. Concluding Synthesis**

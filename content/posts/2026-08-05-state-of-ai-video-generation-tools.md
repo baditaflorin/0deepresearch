@@ -1,6 +1,6 @@
 ---
 title: State of AI Video Generation Tools
-date: 2026-08-05T15:05
+date: 2026-08-05T15:05:00
 draft: false
 description: |-
   Executive summary

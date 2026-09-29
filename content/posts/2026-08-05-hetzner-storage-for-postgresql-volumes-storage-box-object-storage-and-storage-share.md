@@ -1,6 +1,6 @@
 ---
 title: 'Hetzner Storage for PostgreSQL: Volumes, Storage Box, Object Storage and Storage Share'
-date: 2026-08-05T14:44
+date: 2026-08-05T14:44:00
 draft: false
 description: |-
   Executive conclusion

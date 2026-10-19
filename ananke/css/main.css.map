@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/live/.codex/worktrees/0deepresearch-invideo",
+	"sourceRoot": "/private/tmp/claude-501/-Users-live-Documents-fleet-agent-primitives/734b0e6a-1724-4db7-8e7c-1e43ed820b56/scratchpad/dr-test/repo",
 	"sources": [
 		"ananke/css/main.css"
 	],

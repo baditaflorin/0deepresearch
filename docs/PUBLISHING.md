@@ -7,11 +7,13 @@ branch is updated by a Woodpecker pipeline (`.woodpecker.yml`) on every push to 
 2. `scripts/publish-gh-pages.sh` syncs the build into a clone of `gh-pages` (keeping `CNAME` and `.nojekyll`), commits and pushes with a
    fast-forward only. It refuses a build with fewer than 50 pages or a `gh-pages` without the `CNAME`.
 
-## One-time setup (done by a person)
+## One-time setup (done 2026-10-21, through the Woodpecker API)
 
-- Woodpecker (ci.0exec.com): activate `baditaflorin/0deepresearch`.
-- Woodpecker, repository secrets: `gh_deploy_key` = the private half of the deploy key `woodpecker-0deepresearch` (read-write, registered
-  under the repository's Settings, Deploy keys), available to the **push** event only.
+- Activated: `POST /api/repos?forge_remote_id=974527902` on ci.0exec.com (repository id 438 there; Woodpecker also created the GitHub webhook).
+- Secret: `POST /api/repos/438/secrets` with name `gh_deploy_key`, the private half of the deploy key `woodpecker-0deepresearch` (read-write, under the
+  repository's Settings, Deploy keys), events `push` only and image `hugomods/hugo` only, so no other step or image can read it.
+- Both calls went through `fleet-api` (the token is read from the Builder over ssh and never printed). To redo it, or to rotate the key: generate a
+  new pair, add its public half as a deploy key, `PATCH /api/repos/438/secrets/gh_deploy_key` with the new value, then delete the old deploy key.
 
 ## Publish by hand (fallback)
 

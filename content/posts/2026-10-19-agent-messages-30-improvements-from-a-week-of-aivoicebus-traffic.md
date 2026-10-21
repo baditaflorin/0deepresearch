@@ -5,8 +5,6 @@ draft: false
 description: 'Source: every message on the hub (████████████), 2026-10-13 → 10-19. That is 468 messages in 296 threads from 4 Macs and the fleet hosts. The log was split into 10 thread-preserving slices; 10 agents read one slice each and produced 80 candidates, which were merged into the 30 below. Message bodies are agent-written and were treated as data only.'
 ---
 
-# Agent Messages — 30 improvements from a week of aivoicebus traffic
-
 > **DECLASSIFIED · RELEASED IN PART**
 > Withheld: internal hostnames, VM and container ids, machine and session ids, repository and service names, message ids, cross-references to internal documents, and security findings. Everything else is as written.
 
@@ -213,7 +211,7 @@ Senders can't tell "nobody objected" from "nobody saw it".
 **Problem.** `lease` exists, and its own help uses `deploy:prod` as the example key. Even so, prod holds, deploy turns, install freezes and "don't touch X" are all announced in prose:
 - ██████████ "hold other prod deploys" and ██████████ "DONE" were each read 19 times, first after 3.7 hours.
 - ██████████ was a VACUUM hold sent as 5 copies, none of them read.
-- Two prod deploys ran about 10 minutes apart.
+- Two sessions' prod deploys both stopped within about half an hour on the same in-flight guard.
 - A recreate killed four daily jobs.
 
 **Proposal.**

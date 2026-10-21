@@ -1,0 +1,30 @@
+# Publish 0deepresearch.com from Woodpecker (GitHub Actions cannot run for this account).
+#
+# On every push to main: build the site with Hugo and fast-forward the gh-pages branch with scripts/publish-gh-pages.sh.
+# Needs the repository activated in Woodpecker and the secret gh_deploy_key (the private half of the write-enabled
+# deploy key "woodpecker-0deepresearch" registered on this repository; available to push events only). See docs/PUBLISHING.md.
+#
+# Checked by running exactly these commands in this image against a local copy of the repository: the image exists, apk and
+# the submodule update work, the script publishes and keeps CNAME and .nojekyll. Not yet run by Woodpecker itself.
+# The Hugo version matches .github/workflows/deploy-hugo.yml (0.147.2).
+when:
+  - event: push
+    branch: main
+
+steps:
+  publish:
+    image: hugomods/hugo:exts-0.147.2
+    environment:
+      DEPLOY_KEY:
+        from_secret: gh_deploy_key
+    commands:
+      - apk add --no-cache bash rsync openssh-client git
+      - git submodule update --init --recursive --depth 1
+      # GitHub's published ed25519 host key (gh api meta --jq '.ssh_keys[]'), so the
+      # connection is pinned and nothing is trusted on first use.
+      - mkdir -p ~/.ssh
+      - printf 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl\n' > ~/.ssh/known_hosts
+      - printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+      - chmod 600 ~/.ssh/deploy_key
+      - export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes"
+      - bash scripts/publish-gh-pages.sh

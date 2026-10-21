@@ -11,7 +11,8 @@ branch is updated by a Woodpecker pipeline (`.woodpecker.yml`) on every push to 
 
 - Activated: `POST /api/repos?forge_remote_id=974527902` on ci.0exec.com (repository id 438 there; Woodpecker also created the GitHub webhook).
 - Secret: `POST /api/repos/438/secrets` with name `gh_deploy_key`, the private half of the deploy key `woodpecker-0deepresearch` (read-write, under the
-  repository's Settings, Deploy keys), events `push` only and image `hugomods/hugo` only, so no other step or image can read it.
+  repository's Settings, Deploy keys), for the `push` event only. Do not add an image filter: Woodpecker then lets only plugin steps read the secret, and
+  this pipeline's step is a normal `commands` step (the first run failed with exactly that message).
 - Both calls went through `fleet-api` (the token is read from the Builder over ssh and never printed). To redo it, or to rotate the key: generate a
   new pair, add its public half as a deploy key, `PATCH /api/repos/438/secrets/gh_deploy_key` with the new value, then delete the old deploy key.
 
@@ -27,6 +28,12 @@ The build runs `hugo --gc`, which can delete tracked files under `resources/_gen
 ## Rotate the deploy key
 
 Generate a new key pair, add its public half as a deploy key (read-write), replace the Woodpecker secret, delete the old deploy key.
+
+## What a run looks like
+
+The first run (2026-10-21, run 3) waited about 14 minutes in the queue behind other repositories' jobs (the agent takes one workflow at a time, 66 were waiting)
+and took about a minute to run. The first publish from Hugo 0.147.2 changed 66 files (the previous builds came from 0.149); later runs with no site change say
+"gh-pages is already up to date".
 
 ## Roll back
 
